@@ -1,0 +1,158 @@
+package Map;
+import java.util.*;
+
+public class Setprblms {
+
+	public static void main(String[] args) {
+//	HashSet<Integer> num=new HashSet<Integer>();
+//	TreeSet<Integer> num=new TreeSet<Integer>();
+//	num.add(10);
+//	num.add(20);
+//	num.add(10);
+//	num.add(30);
+//	num.add(20);
+//	System.out.println(num);
+		
+//2
+//		int[] arr = {1, 2, 3, 2, 4, 1, 5};
+//		HashSet<Integer> num=new HashSet<Integer>();
+//		HashSet<Integer> duplicates=new HashSet<Integer>();
+//		for(int dup:arr) {
+//			if(!num.add(dup)) {
+//				duplicates.add(dup);
+//			}
+//		}
+//				System.out.println(duplicates);
+		
+//3
+//		LinkedHashSet<Integer> set = new LinkedHashSet<Integer>();
+//		set.add(10);
+//		set.add(20);
+//		set.add(30);
+//		System.out.println(set.containsAll(Arrays.asList(30,20,10)));
+		
+		
+		
+//4
+//		LinkedHashSet<Integer> set = new LinkedHashSet<Integer>();
+//		set.add(1);
+//		set.add(2);
+//		set.add(3);
+//		LinkedHashSet<Integer> set1 = new LinkedHashSet<Integer>();
+//		set1.add(3);
+//		set1.add(4);
+//		set1.add(5);
+//		System.out.println(set.addAll(set1));
+//		System.out.println(set);
+		
+//5
+//		HashSet<Integer> set1 = new HashSet<>(Arrays.asList(1, 2, 3));
+//        HashSet<Integer> set2 = new HashSet<>(Arrays.asList(2, 3, 4));
+//
+//        set1.retainAll(set2);
+//
+//        System.out.println(set1);
+		
+//6
+//		HashSet<Integer> set1 = new HashSet<>(Arrays.asList(1, 2, 3,4));
+//		set1.removeIf(t -> t%2 == 0);
+//		System.out.println(set1);
+		
+//7
+//		LinkedHashSet<Integer> set = new LinkedHashSet<Integer>();
+//		set.add(1);
+//		set.add(2);
+//		set.add(3);
+//		LinkedHashSet<Integer> set1 = new LinkedHashSet<Integer>();
+//		set1.add(2);
+//		set1.add(3);
+//		System.out.println(set.containsAll(set1));
+		
+//8		
+//		LinkedHashSet<Integer> set = new LinkedHashSet<Integer>(Arrays.asList(10,20,30));
+//		List<Integer> list= new ArrayList<>(set);
+//		System.out.println(list);
+		
+//9
+//		List<String> list= new ArrayList<String>(Arrays.asList("a","b","c","a","b"));
+//		HashSet<String> set= new HashSet<String>(list);
+//		System.out.println(set);
+		
+//		TreeSet<Integer> t = new TreeSet<Integer>(Arrays.asList(30,10,20));
+//		System.out.println(t.getFirst());
+		
+//		TreeSet<Integer> t = new TreeSet<Integer>(Arrays.asList(30,10,20));
+//		System.out.println(t.getLast());
+		
+//		TreeSet<Integer> t = new TreeSet<Integer>(Arrays.asList(10,20,30,40,50));
+//		System.out.println(t.headSet(35));
+		
+//		TreeSet<Integer> t = new TreeSet<Integer>(Arrays.asList(10,20,30,40,50));
+//		System.out.println(t.tailSet(30));
+		
+//		TreeSet<Integer> A = new TreeSet<Integer>(Arrays.asList(1,2));
+//		TreeSet<Integer> B = new TreeSet<Integer>(Arrays.asList(1,2,3));
+//		System.out.println();
+		
+//15
+//		LinkedHashSet<Integer> set = new LinkedHashSet<Integer>(Arrays.asList(10,20,30));
+//		set.remove(20);
+//		System.out.println(set);
+		
+//		ArrayList<Integer> num=new ArrayList<Integer>(Arrays.asList(5,10,15));
+//		Iterator<Integer> it=num.iterator();
+//		while(it.hasNext()) {
+//		      System.out.println(it.next());
+//		}
+		
+//		Set<Integer> set=new HashSet<>(Arrays.asList(1,2,3,4));
+//		System.out.println(set.size());
+		
+//		Set<Integer> o = new HashSet<>(Arrays.asList(1, 2, 3));
+//        Set<Integer> clone = new HashSet<>(o);
+//        System.out.println(clone);
+		
+//		Set<Integer> set= new HashSet<>(Arrays.asList(5,10,15));
+//		Integer[] arr = set.toArray(new Integer[0]);
+//        System.out.println(Arrays.toString(arr));
+		
+//		TreeSet<Integer> A = new TreeSet<Integer>(Arrays.asList(20,10,40));
+//		System.out.println(A.first());
+		
+//		LinkedHashSet<Integer> set = new LinkedHashSet<Integer>(Arrays.asList(10,30,20,10,30));
+//		System.out.println(set);
+
+//	String str = "programming";
+//    Set<Character> set = new HashSet<>();
+//    for (char ch : str.toCharArray()) {
+//        set.add(ch);
+//    }
+//    System.out.println(set.size()-1);
+		
+//		HashSet<Integer> set= new HashSet<>(Arrays.asList(10,20,30));
+//		TreeSet<Integer> tre=new TreeSet<Integer>(Arrays.asList(10,20,30));
+//		System.out.println(set.size());
+//		System.out.println(tre.size());
+		
+//		HashSet<Integer> set= new HashSet<>(Arrays.asList(5,10,15));
+//		System.out.println(set.contains(15));
+		
+//		HashSet<Integer> set= new HashSet<>(Arrays.asList(1,2,3,4,5,6));
+//		set.removeIf(t -> t%2 ==0);
+//		System.out.println(set);
+		
+//		LinkedHashSet<Integer> set= new LinkedHashSet<>(Arrays.asList(10,20,30,40));
+//		System.out.println(set.reversed());
+		
+//		TreeSet<Integer> num= new TreeSet<Integer>(Arrays.asList(10,20,30,40));
+//		System.out.println(num.reversed());
+		
+		String input = "java java spring boot spring";
+        List<String> words = Arrays.asList(input.split(" "));
+        Set<String> unique = new HashSet<>(words);
+        for (String w : unique) {
+            int count = Collections.frequency(words, w);
+            System.out.println(w + " → " + count);
+        }
+}
+}
